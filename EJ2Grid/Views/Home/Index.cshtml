@@ -1,0 +1,9 @@
+<ejs-grid id="grid" width="100%" dataSource="@ViewBag.Data" allowPaging="true" editSettings="@(new Syncfusion.EJ2.Grids.GridEditSettings { AllowAdding = ViewBag.gridAdd, AllowEditing = ViewBag.gridEdit, AllowDeleting = ViewBag.gridDelete })" toolbar="@(new List<String>() { "Add", "Edit", "Delete", "Update", "Cancel"})">
+  <e-grid-pagesettings pageSize="8"></e-grid-pagesettings>
+  <e-grid-columns>
+    <e-grid-column field="OrderID" isPrimaryKey="true" headerText="Order ID" width="120"></e-grid-column>
+    <e-grid-column field="EmployeeID" visible="@ViewBag.EmplIDVisibility" allowEditing="@ViewBag.EmplIDEdit" headerText="Employee ID" width="120"></e-grid-column>
+    <e-grid-column field="CustomerID" visible="@ViewBag.CustomerIDVisibility" allowEditing="@ViewBag.CustomerIDEdit" headerText="Customer ID" width="120"></e-grid-column>
+    <e-grid-column field="ShipCountry" visible="@ViewBag.ShipCountryVisibility" allowEditing="@ViewBag.ShipCountryEdit" headerText="Ship Country" width="120"></e-grid-column>
+  </e-grid-columns>
+</ejs-grid>
